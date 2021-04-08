@@ -47,6 +47,11 @@ namespace SnakeLadder
                     sum = 0;
                     Console.WriteLine("Player Restart From: " + sum);
                 }
+                if (sum > 100)
+                {
+                    Console.WriteLine("Player can't move");
+                    sum = sum - dice;
+                }
                 if (sum == 100)
                 {
                     Console.WriteLine("+++++++++++++++++++++++++++++++++++");
