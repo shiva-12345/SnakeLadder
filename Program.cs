@@ -11,6 +11,7 @@ namespace SnakeLadder
             int dice;
             int sum = 0;
             int game_status = 1;
+            int number_of_dice = 0;
 
 
             SnakeLadderUtility snakeLadder = new SnakeLadderUtility();
@@ -32,7 +33,7 @@ namespace SnakeLadder
                         Console.WriteLine("Player is At Same Position: " + sum); ; ;
                         break;
                     case 2:
-                        Console.WriteLine("Ladder Climed At: " + sum + " New Position Became" + (sum + dice));
+                        Console.WriteLine("Ladder Climed At: " + sum + " New Position Became: " + (sum + dice));
                         sum = sum + dice;
 
                         break;
@@ -52,9 +53,11 @@ namespace SnakeLadder
                     Console.WriteLine("Player can't move");
                     sum = sum - dice;
                 }
+                number_of_dice++;
                 if (sum == 100)
                 {
                     Console.WriteLine("+++++++++++++++++++++++++++++++++++");
+                    Console.WriteLine("total number of times  dice thrown : " + number_of_dice);
                     Console.WriteLine("+++++++++++++++++++++++++++++++++++");
                     Console.WriteLine("-------- congrats ! you won -------");
                     Console.WriteLine("+++++++++++++++++++++++++++++++++++");
